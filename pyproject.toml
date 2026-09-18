@@ -1,0 +1,19 @@
+[project]
+name = "azure-fastapi-sample"
+version = "0.1.0"
+description = "Sample FastAPI Web API for Azure App Service using Docker"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi==0.115.0",
+    "uvicorn[standard]==0.32.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.uvicorn]
+host = "0.0.0.0"
+port = 8000
+reload = false

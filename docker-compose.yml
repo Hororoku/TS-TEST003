@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  webapi:
+    build: .
+    container_name: azure-fastapi-webapi
+    ports:
+      - "8000:8000"
+    environment:
+      PYTHONUNBUFFERED: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+    restart: always
